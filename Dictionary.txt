@@ -1,0 +1,61 @@
+> probe_ids_list
+$CCNA2
+[1] "merck-NM_001237_a_at"
+
+$AURKA
+[1] "merck2-BE856617_at"   "merck-BC050630_at"    "merck-NM_017900_s_at" "merck-NM_198436_s_at" "merck-XM_933637_s_at"
+
+$AURKB
+[1] "merck-NM_004217_at"
+
+$FEN1
+[1] "merck2-XM_937756_a_at" "merck-NM_004111_s_at" 
+
+$CD44
+[1] "merck2-BM550721_at"    "merck2-BM792065_at"    "merck2-CR621045_at"    "merck-BC004372_a_at"   "merck-NM_001001389_at"
+
+$CCND3
+[1] "merck2-BQ669293_at" "merck-NM_001760_at"
+
+$NCALD
+[1] "merck2-AF251061_at"    "merck-BC063428_s_at"   "merck-NM_001040630_at"
+
+$MACF1
+[1] "merck2-AB029290_at"   "merck2-BP284289_a_at" "merck2-BQ651417_a_at" "merck2-CX870374_a_at" "merck2-NM_033024_at"  "merck-AF141968_a_at"  "merck-AK023406_a_at" 
+[8] "merck-AK023821_at"   
+
+$MIR296
+character(0)
+
+$`RAMP2-AS1`
+character(0)
+
+$LRC4
+[1] "merck2-NM_007360_at"   "merck2-NM_013431_at"   "merck2-NM_013431_x_at" "merck-NM_007360_at"    "merck-NM_013431_at"    "merck-NM_021209_s_at"  "merck-NM_176677_at"   
+
+$NLRC4
+[1] "merck-NM_021209_s_at"
+
+$PLEKHN1
+[1] "merck-NM_032129_at"
+
+$RASIP1
+[1] "merck-NM_017805_at"
+
+$SPP1
+[1] "merck2-CA447290_at"   "merck2-DQ892544_at"   "merck-BG211014_a_at"  "merck-NM_000582_at"   "merck-NM_024790_s_at"
+
+$GPT2
+[1] "merck2-BX099266_at"   "merck-BC062555_s_at"  "merck-NM_001147_at"   "merck-NM_133443_s_at"
+
+$FAM220A
+character(0)
+
+$SGPL1
+[1] "merck-ENST00000299297_at" "merck-NM_003901_a_at"    
+
+$PCOLCE2
+[1] "merck2-AK223633_at" "merck-NM_013363_at"
+
+$`GABPB1-IT1`
+character(0)
