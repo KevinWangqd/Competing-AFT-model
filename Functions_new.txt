@@ -431,8 +431,8 @@ Inform_mat_l <- function(Y, delta, X, alpha, beta, sigma, l){
 
 
 se <- function(matrix){
-  inv_mat = solve(matrix, tol=1e-3)  ## calculate 
-  se = sqrt((diag(inv_mat)))
+  inv_mat = solve(matrix, tol=1e-5)  ## calculate 
+  se = sqrt(abs(diag(inv_mat)))
   return(se)
 }
 
@@ -573,10 +573,42 @@ coordinate_update <- function(j, Y, delta, eta_l, X_l, alpha_l, beta_l, sigma_l,
       control = list(reltol = 1e-3)
     )
     
+    beta_l_opt = result_beta$par
+    
+    # Step 2: Screening to enforce sparsity (for each beta_l[j])
+    for (k in 1:length(beta_l_opt)) {
+    
+    
+     if (length(beta_l_opt) == 1) {
+       beta_temp = 0
+     } else if (k == 1) {
+    # Update the first element of beta_l
+        beta_temp = c(0, beta_l_opt[(k + 1):length(beta_l_opt)])
+      } else if (k == length(beta_l_opt)) {
+    # Update the last element of beta_l
+       beta_temp = c(beta_l_opt[1:(k - 1)], 0)
+      } else {
+    # Update an intermediate element of beta_l
+       beta_temp = c(beta_l_opt[1:(k - 1)], 0, beta_l_opt[(k + 1):length(beta_l_opt)])
+     }
+    
+     dQ_at_0 <- dQ_l(1, Y, delta, eta_l, X_l, alpha_l, beta_temp, sigma_l, lambda1 = 0, lambda2 = 0)
+    
+     if (abs(dQ_at_0[k]) < lambda2) {
+       beta_l_opt[k] <- 0
+     }
+
+    }
+    
     # Return the optimized beta_lj
-    return(result_beta$par)
+    return(beta_l_opt)
+    
     
   }
+    
+    
+
+  
   
 }
 
